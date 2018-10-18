@@ -1,0 +1,30 @@
+{
+    "name": "svelte2snippets",
+    "displayName": "svelte2snippets",
+    "description": "Simple Svelte 2 Snippets generator",
+    "version": "1.0.0",
+    "publisher": "SharifClick",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sharifclick/svelte-v2-snippets.git"
+    },
+    "icon": "icon.png",   
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "html",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

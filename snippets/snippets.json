@@ -1,0 +1,84 @@
+{
+	"Svelte Script": {
+    "prefix": "svscript",
+    "body": [
+    	"<script>\n",
+    	"\texport default {",
+    	"\t\tdata(){",
+    	"\t\t\treturn {",
+    	"\t\t\t\t$0",
+    	"\t\t\t}",
+    	"\t\t}",
+    	"\t}",
+    	"</script>"
+
+    ],
+    "description": "svelte export wrapped in script tag"
+  },
+  "Export": {
+    "prefix": "svexport",
+    "body": [
+    	"export default {",
+    	"\tdata(){",
+    	"\t\treturn {",
+    	"\t\t\t$0",
+    	"\t\t}",
+    	"\t}",
+    	"}"
+    ],
+    "description": "Svelte export"
+  },
+  "If": {
+    "prefix": "svif",
+    "body": [
+    	"{#if $1}",
+    	"\t$2",
+    	"{/if}"
+    ],
+    "description": "svelte if block"
+  },
+  "If Else": {
+    "prefix": "svifelse",
+    "body": [
+    	"{#if $1}",
+    	"\t$2",
+    	"{:else}",
+    	"\t$3",
+    	"{/if}"
+    ],
+    "description": "svelte if else block"
+  },
+  "If Else If": {
+    "prefix": "svifelseif",
+    "body": [
+    	"{#if $1}",
+    	"\t$2",
+    	"{:elseif}",
+    	"\t$3",
+    	"{:else}",
+    	"\t$4",
+    	"{/if}"
+    ],
+    "description": "svelte if else if block"
+  },
+  "Each Block": {
+    "prefix": "sveach",
+    "body": [
+    	"{#each $1 as $2}",
+    	"\t$3",
+    	"{/each}"
+    ],
+    "description": "svelte each block"
+  },
+  "Each Else Block": {
+    "prefix": "sveachelse",
+    "body": [
+    	"{#each $1 as $2}",
+    	"\t$3",
+    	"{:else}",
+    	"\t$4",
+    	"{/each}"
+    ],
+    "description": "svelte each else block"
+  }
+}

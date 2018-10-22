@@ -1,124 +1,193 @@
 {
-	"Svelte Script": {
+  "Svelte Script": {
     "prefix": "svscript",
     "body": [
-    	"<script>\n",
-    	"\texport default {",
-    	"\t\tdata(){",
-    	"\t\t\treturn {",
-    	"\t\t\t\t$0",
-    	"\t\t\t}",
-    	"\t\t}",
-    	"\t}",
-    	"</script>"
-
+      "<script>\n",
+      "\texport default {",
+      "\t\tdata(){",
+      "\t\t\treturn {",
+      "\t\t\t\t$0",
+      "\t\t\t}",
+      "\t\t}",
+      "\t}",
+      "</script>"
     ],
     "description": "svelte export wrapped in script tag"
+  },
+  "Svelte Script Full": {
+    "prefix": "svscriptfull",
+    "body": [
+      "<script>\n",
+      "\timport $1 from '$2';\n",
+      "\texport default {",
+      "\t\tcomponents:{",
+      "\t\t\t$1",
+      "\t\t},",
+      "\t\tcomputed:{",
+      "\t\t\t$4: ({$5}) => $6",
+      "\t\t},",
+      "\t\tdata(){",
+      "\t\t\treturn {",
+      "\t\t\t\t$3",
+      "\t\t\t}",
+      "\t\t},",
+      "\t\toncreate(){",
+      "\t\t\tvar self = this;",
+      "\t\t\t$7",
+      "\t\t},",
+      "\t\tmethods: {",
+      "\t\t\t$8",
+      "\t\t}",
+      "\t}",
+      "</script>"
+    ],
+    "description": "svelte extended script"
   },
   "Export": {
     "prefix": "svexport",
     "body": [
-    	"export default {",
-    	"\tdata(){",
-    	"\t\treturn {",
-    	"\t\t\t$0",
-    	"\t\t}",
-    	"\t}",
-    	"}"
+      "export default {",
+      "\tdata(){",
+      "\t\treturn {",
+      "\t\t\t$0",
+      "\t\t}",
+      "\t}",
+      "}"
     ],
     "description": "Svelte export"
+  },
+  "Svelte Export Full": {
+    "prefix": "svexportfull",
+    "body": [
+      "import $1 from '$2';\n",
+      "export default {",
+      "\tcomponents:{",
+      "\t\t$1",
+      "\t},",
+      "\tcomputed:{",
+      "\t\t$4: ({$5}) => $6",
+      "\t},",
+      "\tdata(){",
+      "\t\treturn {",
+      "\t\t\t$3",
+      "\t\t}",
+      "\t}",
+      "\toncreate(){",
+      "\t\tvar self = this;",
+      "\t\t$7",
+      "\t},",
+      "\tmethods: {",
+      "\t\t$8",
+      "\t}",
+      "}"
+    ],
+    "description": "svelte extended script"
   },
   "If": {
     "prefix": "svif",
     "body": [
-    	"{#if $1}",
-    	"\t$2",
-    	"{/if}"
+      "{#if $1}",
+      "\t$2",
+      "{/if}"
     ],
     "description": "svelte if block"
   },
   "If Else": {
     "prefix": "svifelse",
     "body": [
-    	"{#if $1}",
-    	"\t$2",
-    	"{:else}",
-    	"\t$3",
-    	"{/if}"
+      "{#if $1}",
+      "\t$2",
+      "{:else}",
+      "\t$3",
+      "{/if}"
     ],
     "description": "svelte if else block"
   },
   "If Else If": {
     "prefix": "svifelseif",
     "body": [
-    	"{#if $1}",
-    	"\t$2",
-    	"{:elseif}",
-    	"\t$3",
-    	"{:else}",
-    	"\t$4",
-    	"{/if}"
+      "{#if $1}",
+      "\t$2",
+      "{:elseif}",
+      "\t$3",
+      "{:else}",
+      "\t$4",
+      "{/if}"
     ],
     "description": "svelte if else if block"
   },
   "Each Block": {
     "prefix": "sveach",
     "body": [
-    	"{#each $1 as $2}",
-    	"\t$3",
-    	"{/each}"
+      "{#each $1 as $2}",
+      "\t$3",
+      "{/each}"
     ],
     "description": "svelte each block"
   },
   "Each Else Block": {
     "prefix": "sveachelse",
     "body": [
-    	"{#each $1 as $2}",
-    	"\t$3",
-    	"{:else}",
-    	"\t$4",
-    	"{/each}"
+      "{#each $1 as $2}",
+      "\t$3",
+      "{:else}",
+      "\t$4",
+      "{/each}"
     ],
     "description": "svelte each else block"
   },
   "On Create": {
     "prefix": "svoncreate",
     "body": [
-        "oncreate(){",
-        "\tvar self = this;",
-        "\t$2",
-        "},$1"
+      "oncreate(){",
+      "\tvar self = this;",
+      "\t$2",
+      "},$1"
     ],
     "description": "svelte oncreate lifecycle method"
   },
   "On State": {
     "prefix": "svonstate",
     "body": [
-    "onstate({changed, current, previous}){",
-        "\tvar self = this;",
-        "\t$2",
-        "},$1"
+      "onstate({changed, current, previous}){",
+      "\tvar self = this;",
+      "\t$2",
+      "},$1"
     ],
     "description": "svelte onstate lifecycle method"
   },
   "On Update": {
     "prefix": "svonupdate",
     "body": [
-    "onupdate({changed, current, previous}){",
-        "\tvar self = this;",
-        "\t$2",
-        "},$1"
+      "onupdate({changed, current, previous}){",
+      "\tvar self = this;",
+      "\t$2",
+      "},$1"
     ],
     "description": "svelte onupdate lifecycle method"
   },
   "On Destroy": {
     "prefix": "svondestroy",
     "body": [
-    "ondestroy(){",
-        "\tvar self = this;",
-        "\t$2",
-        "},$1"
+      "ondestroy(){",
+      "\tvar self = this;",
+      "\t$2",
+      "},$1"
     ],
     "description": "svelte ondestroy lifecycle method"
+  },
+  "Svelte Get Method": {
+    "prefix": "svget",
+    "body": [
+      "var {$1} = this$2.get();"
+    ],
+    "description": "this.get()"
+  },
+  "Svelte Set Method": {
+    "prefix": "svset",
+    "body": [
+      "this$1.set({ $2 : $3});"
+    ],
+    "description": "this.set()"
   }
 }

@@ -7,3 +7,7 @@
 
 - .svelte file extention support
 - `set` `get` support
+
+## 1.2.0
+
+- events and wrappers support

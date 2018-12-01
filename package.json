@@ -2,7 +2,7 @@
 	"name": "svelte2snippets",
 	"displayName": "Svelte 2 Snippets",
 	"description": "Simple Svelte 2 Snippets generator",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"publisher": "SharifClick",
 	"engines": {
 		"vscode": "^1.28.0"

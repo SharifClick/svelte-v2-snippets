@@ -156,6 +156,15 @@
     ],
     "description": "svelte onstate lifecycle method"
   },
+  "On State Event": {
+    "prefix": "svonstateevent",
+    "body": [
+      "this.on('state', ({changed, current, previous}) => {",
+      "\t$2",
+      "});"
+    ],
+    "description": "svelte `state` event"
+  },
   "On Update": {
     "prefix": "svonupdate",
     "body": [
@@ -165,6 +174,15 @@
       "},$1"
     ],
     "description": "svelte onupdate lifecycle method"
+  },
+  "On Update Event": {
+    "prefix": "svonupdateevent",
+    "body": [
+      "this.on('update', ({changed, current, previous}) => {",
+      "\t$2",
+      "});"
+    ],
+    "description": "svelte `update` event"
   },
   "On Destroy": {
     "prefix": "svondestroy",
@@ -179,9 +197,16 @@
   "Svelte Get Method": {
     "prefix": "svget",
     "body": [
-      "var {$1} = this$2.get();"
+      "this.get()$1;"
     ],
     "description": "this.get()"
+  },
+  "Svelte Get with declare": {
+    "prefix": "svget",
+    "body": [
+      "var {$1} = this$2.get();"
+    ],
+    "description": "this.get() with declaration"
   },
   "Svelte Set Method": {
     "prefix": "svset",
@@ -189,5 +214,61 @@
       "this$1.set({ $2 : $3});"
     ],
     "description": "this.set()"
+  },
+  "Svelte Event": {
+    "prefix": "svonupdateevent",
+    "body": [
+      "this.on('$1', ($2) => {",
+      "\t$3",
+      "});"
+    ],
+    "description": "svelte event"
+  },
+  "Svelte Computed": {
+    "prefix": "svcomputed",
+    "body": [
+      "computed: {",
+      "\t$1: ({$2}) => $3",
+      "},$4"
+    ],
+    "description": "svelte computed property wrapper"
+  },
+  "Svelte methods": {
+    "prefix": "svmethods",
+    "body": [
+      "methods: {",
+      "\t$1(){",
+      "\t\t$2",
+      "\t}",
+      "},$3"
+    ],
+    "description": "svelte methods wrapper"
+  },
+  "Svelte components": {
+    "prefix": "svcomponents",
+    "body": [
+      "components: {",
+      "\t$1",
+      "},$2"
+    ],
+    "description": "svelte components wrapper"
+  },
+  "Svelte helpers": {
+    "prefix": "svhelpers",
+    "body": [
+      "helpers: {",
+      "\t$1",
+      "},$2"
+    ],
+    "description": "svelte helpers wrapper"
+  },
+  "Svelte actions": {
+    "prefix": "svactions",
+    "body": [
+      "actions: {",
+      "\t$1",
+      "},$2"
+    ],
+    "description": "svelte actions wrapper"
   }
 }

@@ -11,3 +11,7 @@
 ## 1.2.0
 
 - events and wrappers support
+
+## 1.3.0
+
+- fixes

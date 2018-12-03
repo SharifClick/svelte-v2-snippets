@@ -254,7 +254,7 @@ The essential collection of Svelte V2 Snippets.
   },
 ```
 
-### svcmethods - svelte methods wrapper
+### svmethods - svelte methods wrapper
 
 ```javascript
   methods: {
@@ -291,5 +291,11 @@ The essential collection of Svelte V2 Snippets.
 
 ```javascript
   var {|} = this|.get();
+```
+
+### svset - svelte `set` method
+
+```javascript
+  this.set({ | : | });
 ```
 

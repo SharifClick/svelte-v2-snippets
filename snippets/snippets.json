@@ -141,8 +141,8 @@
     "body": [
       "oncreate(){",
       "\tvar self = this;",
-      "\t$2",
-      "},$1"
+      "\t$1",
+      "},$2"
     ],
     "description": "svelte oncreate lifecycle method"
   },
@@ -151,8 +151,8 @@
     "body": [
       "onstate({changed, current, previous}){",
       "\tvar self = this;",
-      "\t$2",
-      "},$1"
+      "\t$1",
+      "},$2"
     ],
     "description": "svelte onstate lifecycle method"
   },
@@ -160,7 +160,7 @@
     "prefix": "svonstateevent",
     "body": [
       "this.on('state', ({changed, current, previous}) => {",
-      "\t$2",
+      "\t$1",
       "});"
     ],
     "description": "svelte `state` event"
@@ -170,8 +170,8 @@
     "body": [
       "onupdate({changed, current, previous}){",
       "\tvar self = this;",
-      "\t$2",
-      "},$1"
+      "\t$1",
+      "},$2"
     ],
     "description": "svelte onupdate lifecycle method"
   },
@@ -179,7 +179,7 @@
     "prefix": "svonupdateevent",
     "body": [
       "this.on('update', ({changed, current, previous}) => {",
-      "\t$2",
+      "\t$1",
       "});"
     ],
     "description": "svelte `update` event"
@@ -189,8 +189,8 @@
     "body": [
       "ondestroy(){",
       "\tvar self = this;",
-      "\t$2",
-      "},$1"
+      "\t$1",
+      "},$2"
     ],
     "description": "svelte ondestroy lifecycle method"
   },
@@ -202,7 +202,7 @@
     "description": "this.get()"
   },
   "Svelte Get with declare": {
-    "prefix": "svget",
+    "prefix": "svgetd",
     "body": [
       "var {$1} = this$2.get();"
     ],
@@ -216,7 +216,7 @@
     "description": "this.set()"
   },
   "Svelte Event": {
-    "prefix": "svonupdateevent",
+    "prefix": "svevent",
     "body": [
       "this.on('$1', ($2) => {",
       "\t$3",

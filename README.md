@@ -30,6 +30,7 @@ The essential collection of Svelte V2 Snippets.
 | `svhelpers`       | Svelte `helpers` wrapper            |
 | `svactions`       | Svelte `actions` wrapper            |
 | `svget`  		      | `this.get()`                        |
+| `svgetd`  		    | `this.get()` with declaration       |
 | `svset`           | `this.set()`                        |
 
 ## Full Expansions
@@ -280,13 +281,13 @@ The essential collection of Svelte V2 Snippets.
   },
 ```
 
-### svgetd - svelte `get` method
+### svget - svelte `get` method
 
 ```javascript
   this.get()|;
 ```
 
-### svget - svelte `get` method with declaration
+### svgetd - svelte `get` method with declaration
 
 ```javascript
   var {|} = this|.get();
